@@ -1,0 +1,18 @@
+Configuring Reporting over HTTPS (CQ10919)
+
+To run reporting over HTTPS rather than HTTP:
+
+1 Make sure your application server is configured for HTTPS access.
+
+2 Enter the HTTPS port into the ConfigureJasperSoft tool when it asks for the HTTP port.
+
+3 Make sure the scope_server_url in general.properties is an HTTPS URL.
+
+4 Before starting the application server, manually edit scopeserver/WEB-INF/conf/scopeserver.xml. Find the line that says:
+
+<Property name="protocol">http</Property>
+
+and change it to:
+
+<Property name="protocol">https</Property>
+
